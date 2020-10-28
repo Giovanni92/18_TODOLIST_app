@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo list</title>
+    <!-- colleghiamo file.css  -->
+    <link rel="stylesheet" href="style.css">
+    aggiungiamo js
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>My todo List</h1>
+    <!-- creiamo una lista ul  -->
+    <!-- aggiungiamo una textbox che ogni volta che aggiungiamo una todolist e inviamo il nostro todo venga aggiunta alla lista -->
+    <input placeholder="Add new todo" name="todo" id="todo">
+    <ul id="todolist">
+        <!-- aggiungiamo una checkbox flaggabile -->
+        <li class="completed">
+            <!-- elemento che è stato comletato, lo possimao flaggare-->
+            <span class="completed"></span>            
+            Todo1
+            <!-- possibilita di rimuovere lista -->
+            <span class="cross"></span>
+
+        </li>
+        <li>
+            <!-- elemento che NON è stato comletato, NON lo possimao flaggare-->
+            <span class="uncomplete"></span>
+            Todo1
+        </li>
+        <li>
+            <span class="uncomplete"></span>
+            Todo2
+        </li>
+        <li>
+            <span class="uncomplete"></span>
+            Todo3
+        </li>
+        <li>
+            <span class="uncomplete"></span>
+            Todo4
+        </li>
+
+    </ul>
+</body>
+</html>

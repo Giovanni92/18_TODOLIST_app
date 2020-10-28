@@ -1,0 +1,77 @@
+html {
+    /* resettiamo propietà */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 75%;
+    height: 100%;
+
+}
+
+body {
+    /* con border-box quando mettiamo il width a un contenitore è gia compreso il padding e il border 
+    del contenitore */
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    /* linear-gradient gli diciamo verso quale senso possiamo creare il nostro gradiente */
+    /* to bottom (dall'alto al basso) */
+    background: linear-gradient( to bottom, deepskyblue, white);
+}
+
+/* Parte2 reindirizzare icona check e remove con css */
+ul#todolist{
+    list-style-type: none;
+    padding: 0;
+
+    /* facciamo in modo che la ul non si prenda tutto lo schermo (il contenuto)*/
+    max-width: 400px;
+    margin: auto;   /* in modo da centrarlo nello schermo */
+}
+
+ul#todolist li{
+    text-align: left;
+    border-bottom: 1px solid #dedede;
+    padding: 10px 0px;   /* 10 e il resto ha 0px */
+    cursor: pointer;     /* indica che si puo fare un azione sull'elemento */
+    min-width: 250px;
+} 
+/* PUNTO 2 - start -  */
+li.completed{
+    text-decoration: line-through;
+}
+/* PUNTO 2 - end -  */
+
+/* facciamo in modo che span abbia la forma di una checkbox */
+/* uno span che si trova dopo il tag li di una lista todolist e che abbia la classe completed: */
+ul#todolist li span.completed:after{
+     content: '\02705';   /*gli aggiungiamo il codice di un carattere unicode con ZERO davanti*/
+    color: green;
+    font-size: 18px;
+    padding:4px;
+}
+
+/* facciamo la classe per quewlli che sono da spuntare (ballot box)*/
+ul#todolist li span.uncomplete:after{
+    content: '\02610';   /*gli aggiungiamo il codice di un carattere unicode con ZERO davanti*/
+   color: black;
+   font-size: 29px;
+   padding:4px;
+}
+/* 
+PUNTO 2 - dobbiamo metter ela possibilità che si possa cancellare una lista (x piccola rossa)
+        - quando si flagga, linea che cancella testo */
+
+ul#todolist li:hover span.cross:after{
+    content: '\02A2F';   /*simbolo croce unicode*/
+    color: red;
+    font-size: 29px;
+    padding:4px;
+    float: right; /*  posiziona sulla destra  */
+
+    /* facciamo che la croce compaia solo quando passo il mouse sopra (hover)
+    ul#todolist li:hover span.cross:after */
+
+    margin-right: 5px;
+
+
+}
